@@ -1,0 +1,50 @@
+﻿#mainimage {
+	text-align: center;
+}
+
+.outerwrap{
+	position:relative;
+	overflow:hidden;
+}
+
+.links {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	float:left;
+	position:relative;
+	left:50%;
+}
+
+.content {
+	float:left;
+	position:relative;
+	left:-30%;
+}
+
+a:link {
+	color:#666666;
+	font-size: 18px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-style: normal;
+	font-weight: lighter;
+	text-decoration: none;
+}
+
+a:visited {
+	color:#666666;
+}
+
+a:hover {
+	color:#333333;
+}
+
+a:active {
+	color:#000000;
+}
+
+#filenotfound {
+	color:#666666;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: lighter;
+	font-style: normal;
+	font-size: 18px;
+}
