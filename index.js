@@ -1,26 +1,26 @@
 var pref = localStorage.getItem('color');
 if (pref == null) {
-    localStorage.setItem('color', 'dark');
-    pref = 'dark';
+    localStorage.setItem('color', 'light');
+    pref = 'light';
 }
 
 setColor();
 
 d3.select('img').on('mouseover', function () {
     if (pref == 'dark') {
-        d3.select('img').attr('src', 'images/gv3-250.png');
+        d3.select('img').attr('src', 'images/gv3-500.png');
     }
     else if (pref == 'light') {
-        d3.select('img').attr('src', 'images/gv3-250-dark.png');
+        d3.select('img').attr('src', 'images/gv3-500-dark.png');
     }
 });
 
 d3.select('img').on('mouseout', function () {
     if (pref == 'dark') {
-        d3.select('img').attr('src', 'images/gv3-250-dark.png');
+        d3.select('img').attr('src', 'images/gv3-500-dark.png');
     }
     else if (pref == 'light') {
-        d3.select('img').attr('src', 'images/gv3-250.png');
+        d3.select('img').attr('src', 'images/gv3-500.png');
     }
 });
 
@@ -37,24 +37,24 @@ d3.select('img').on('click', function () {
 function setColor() {
     pref = localStorage.getItem('color');
     if (pref == null) {
-        localStorage.setItem('color', 'dark');
-        pref = 'dark';
+        localStorage.setItem('color', 'light');
+        pref = 'light';
     }
     var defaultColor = '';
     var hoverColor = '';
     var clickColor = '';
-    if (pref == 'light') {
-        defaultColor = '#666666';
-        hoverColor = '#333333';
-        clickColor = '#000000';
-        d3.select('img').attr('src', 'images/gv3-250.png');
+    if (pref == null || pref == 'light') {
+        defaultColor = '#8FA1B3';
+        hoverColor = '#65737E';
+        clickColor = '#4F5B66';
+        d3.select('img').attr('src', 'images/gv3-500.png');
         d3.select('body').style('background-color', '#FFFFFF');
     }
-    else if (pref == null || pref == 'dark') {
+    else if (pref == 'dark') {
         defaultColor = '#8FA1B3';
-        hoverColor = '#5F6D78';
-        clickColor = '#FFFFFF';
-        d3.select('img').attr('src', 'images/gv3-250-dark.png');
+        hoverColor = '#65737E';
+        clickColor = '#C0C5CE';
+        d3.select('img').attr('src', 'images/gv3-500-dark.png');
         d3.select('body').style('background-color', '#2B303B');
     }
     
