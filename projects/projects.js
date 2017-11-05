@@ -1,4 +1,4 @@
-let baseUrl = 'http://services.golf1052.com/api/'
+let baseUrl = 'https://services.golf1052.com/api/'
 let pageTheme = 'light';
 
 let oceanTheme = {
