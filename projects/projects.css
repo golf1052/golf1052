@@ -1,45 +1,13 @@
-.projects {
-}
-
-.project-box {
-    width: 500px;
-    height: 200px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-p {
-    margin: 0px 0px 5px 20px;
-    font-size: 18px;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	font-style: normal;
-	font-weight: lighter;
-	text-decoration: none;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.project-name {
-    margin: 20px 0px 0px 20px;
-}
-
-.attribution {
-    font-size: 14px;
-    margin-left: 30px;
-}
-
 .languages-div {
     border-top: 1px solid black;
 }
 
 .language-block {
-    margin-top: 7px;
     display: inline-block;
 }
 
 .language-color {
-    margin-left: 20px;
+    margin: 0px 2px 0px 8px;
     display: inline-block;
     border: 0px solid black;
     border-radius: 50%;
@@ -49,10 +17,31 @@ p {
 }
 
 .language-text {
-    margin: 0px 0px 5px 5px;
+    margin: 0px 8px 0px 2px;
     font-size: 18px;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-style: normal;
 	font-weight: lighter;
 	text-decoration: none;
+}
+
+.card-footer {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.card-deck {
+    margin: 20px 0px;
+}
+
+a {
+    color: #8fa1b3;
+}
+
+.card-subtitle {
+    margin-left: 8px;
+}
+
+.progress {
+    margin-top: 128px;
 }
