@@ -25,8 +25,7 @@ let oceanTheme = {
   "base0F": "#ab7967"
 };
 
-function themePage(theme) {
-  pageTheme = theme.theme;
+function themePage() {
   d3.select('body')
     .attr('style', function() {
       if (pageTheme == 'dark') {
@@ -165,3 +164,4 @@ function loadProjects(projects) {
   }
 }
 
+themePage();
