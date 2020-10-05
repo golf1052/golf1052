@@ -1,5 +1,10 @@
 let baseUrl = 'https://services.golf1052.com/api/'
-let pageTheme = 'light';
+let pageTheme = localStorage.getItem('color');
+
+if (pageTheme == null) {
+    localStorage.setItem('color', 'light');
+    pageTheme = 'light';
+}
 
 let oceanTheme = {
   "base00": "#2b303b",
@@ -29,23 +34,6 @@ function themePage(theme) {
       }
     })
   d3.json(`${baseUrl}projects`, loadProjects);
-}
-
-function themeWithCoords(coords) {
-  d3.json(`${baseUrl}theme?latitude=${coords.coords.latitude}&longitude=${coords.coords.longitude}`, themePage);
-}
-
-function themeWithIp() {
-  d3.json(`${baseUrl}theme`, themePage);
-}
-
-if ('geolocation' in navigator) {
-  navigator.geolocation.getCurrentPosition(themeWithCoords, themeWithIp, {
-    enableHighAccuracy: false
-  });
-}
-else {
-  themeWithIp();
 }
 
 function loadProjects(projects) {
